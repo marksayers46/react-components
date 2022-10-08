@@ -15,20 +15,25 @@ const options = [
     value: 3
   },
   {  
-    label: "fourth",
+    label: "Fourth",
     value: 4
   },
   {
-    label: "fifth",
+    label: "Fifth",
     value: 5
-  },  
+  }, 
 ]
 
+const onChange() => {
+
+}
+
 function App() {
+  const [value, setValue] = useState<typeof options[0] | undefined>(options[0])
 
   return (
     <>
-      <Select options={options}/>
+      <Select options={options} value={value} onChange={opt => setValue(opt)} />
     </>
   )
 }
