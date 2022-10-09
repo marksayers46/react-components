@@ -24,16 +24,12 @@ const options = [
   }, 
 ]
 
-const onChange() => {
-
-}
-
 function App() {
   const [value, setValue] = useState<typeof options[0] | undefined>(options[0])
 
   return (
     <>
-      <Select options={options} value={value} onChange={opt => setValue(opt)} />
+      <Select options={options} value={value}  onChange={option => setValue(option)}/>
     </>
   )
 }
